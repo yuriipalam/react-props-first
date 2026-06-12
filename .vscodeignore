@@ -1,0 +1,12 @@
+node_modules/@types
+node_modules/typescript
+node_modules/csstype
+node_modules/undici-types
+.vscode-test
+src
+tests
+test-workspace
+packages/react-props-first-ts-plugin/src
+packages/react-props-first-ts-plugin/tsconfig.json
+**/*.map
+tsconfig.json

@@ -1,0 +1,75 @@
+{
+  "name": "react-props-first",
+  "displayName": "React Props First",
+  "description": "Prioritize custom React component props before inherited React, DOM, and ARIA props in JSX completions.",
+  "version": "0.0.1",
+  "publisher": "react-props-first",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:typescriptreact",
+    "onLanguage:javascriptreact"
+  ],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p tsconfig.json && tsc -p packages/react-props-first-ts-plugin/tsconfig.json",
+    "watch": "tsc -w -p tsconfig.json",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "npm run compile && node --test tests/*.test.js",
+    "test:vscode": "npm run compile && node ./dist/test/runTest.js"
+  },
+  "contributes": {
+    "configuration": {
+      "title": "React Props First",
+      "properties": {
+        "reactPropsFirst.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable React Props First completion ordering."
+        },
+        "reactPropsFirst.enableJavaScript": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable React Props First in JavaScript React files when TypeScript can infer component props."
+        },
+        "reactPropsFirst.debug": {
+          "type": "boolean",
+          "default": false,
+          "description": "Write React Props First diagnostic messages to the TypeScript server log."
+        }
+      }
+    },
+    "typescriptServerPlugins": [
+      {
+        "name": "react-props-first-ts-plugin",
+        "enableForWorkspaceTypeScriptVersions": true
+      }
+    ]
+  },
+  "dependencies": {
+    "react-props-first-ts-plugin": "file:packages/react-props-first-ts-plugin"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/vscode": "^1.92.0",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.4",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.61.0"
+  }
+}

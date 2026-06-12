@@ -1,0 +1,8 @@
+node_modules/
+.vscode-test/
+dist/
+packages/*/dist/
+*.vsix
+*.tgz
+npm-debug.log*
+.DS_Store

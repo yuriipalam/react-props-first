@@ -1,7 +1,7 @@
 {
   "name": "react-props-first",
   "displayName": "React Props First",
-  "description": "Prioritize custom React component props before inherited React, DOM, and ARIA props in JSX completions.",
+  "description": "Prioritize custom React component props before inherited DOM, and ARIA props in JSX completions.",
   "version": "0.0.1",
   "publisher": "react-props-first",
   "license": "MIT",

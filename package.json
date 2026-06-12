@@ -3,8 +3,16 @@
   "displayName": "React Props First",
   "description": "Prioritize custom React component props before inherited DOM, and ARIA props in JSX completions.",
   "version": "0.0.1",
-  "publisher": "react-props-first",
+  "publisher": "yurii",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuriipalam/react-props-first.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yuriipalam/react-props-first/issues"
+  },
+  "homepage": "https://github.com/yuriipalam/react-props-first#readme",
   "engines": {
     "vscode": "^1.92.0"
   },
@@ -24,6 +32,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "package:vsix": "npm run compile && node scripts/vsce-package.mjs package",
+    "publish:marketplace": "npm run compile && node scripts/vsce-package.mjs publish",
     "test": "npm run compile && node --test tests/*.test.js",
     "test:vscode": "npm run compile && node ./dist/test/runTest.js"
   },
@@ -65,6 +75,7 @@
     "@types/react": "^18.3.3",
     "@types/vscode": "^1.92.0",
     "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.9.2",
     "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.6.0",

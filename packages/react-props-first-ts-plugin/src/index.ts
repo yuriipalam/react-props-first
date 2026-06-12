@@ -274,7 +274,7 @@ function rankCompletionEntries(
   propsType: tsModule.Type,
   entries: readonly tsModule.CompletionEntry[]
 ): {
-  change: boolean;
+  changed: boolean;
   entries: tsModule.CompletionEntry[];
   customCount: number;
   inheritedCount: number;

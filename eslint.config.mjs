@@ -6,7 +6,13 @@ import tseslint from "typescript-eslint";
 
 export default [
   {
-    ignores: ["dist/**", "packages/*/dist/**", "node_modules/**", ".vscode-test/**"]
+    ignores: [
+      "dist/**",
+      "packages/*/dist/**",
+      "node_modules/**",
+      ".vscode-test/**",
+      ".vsce-build/**"
+    ]
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommended,

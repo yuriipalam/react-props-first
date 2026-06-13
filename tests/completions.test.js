@@ -94,6 +94,68 @@ test("JSX custom props sort first when JavaScript inference provides prop types"
   assertBefore(entries, "loading", "onClick");
 });
 
+test("TSX custom props sort first for React.forwardRef components", () => {
+  const source = `
+    import * as React from "react";
+
+    interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+      variant?: "primary" | "secondary";
+      loading?: boolean;
+    }
+
+    const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+      props,
+      ref
+    ) {
+      return <button ref={ref} {...props} />;
+    });
+
+    const demo = <Button /*cursor*/ />;
+  `;
+
+  const service = createService({
+    fileName: path.join(root, "tests/fixtures/forward-ref.tsx"),
+    source
+  });
+
+  const entries = getCompletionEntries(service);
+
+  assertBefore(entries, "variant", "disabled");
+  assertBefore(entries, "loading", "onClick");
+});
+
+test("TSX custom props sort first for React.memo components", () => {
+  const source = `
+    import * as React from "react";
+
+    interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+      variant?: "primary" | "secondary";
+      loading?: boolean;
+    }
+
+    const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonProps>(function ButtonBase(
+      props,
+      ref
+    ) {
+      return <button ref={ref} {...props} />;
+    });
+
+    const Button = React.memo(ButtonBase);
+
+    const demo = <Button /*cursor*/ />;
+  `;
+
+  const service = createService({
+    fileName: path.join(root, "tests/fixtures/memo.tsx"),
+    source
+  });
+
+  const entries = getCompletionEntries(service);
+
+  assertBefore(entries, "variant", "disabled");
+  assertBefore(entries, "loading", "onClick");
+});
+
 test("non-JSX completions keep TypeScript's original order", () => {
   const source = `
     const value = {

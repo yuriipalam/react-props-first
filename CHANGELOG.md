@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.2
+
+- Adds the React Props First extension icon.
+- Adds GitHub Actions CI for formatting, linting, language service tests, and VS Code smoke tests.
+- Adds completion coverage for `React.forwardRef` and `React.memo` components.
+
 ## 0.0.1
 
 Initial release of React Props First.

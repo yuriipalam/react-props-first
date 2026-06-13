@@ -1,8 +1,6 @@
 # React Props First
 
-React Props First is a VS Code extension that prioritizes custom React component props before inherited React, DOM, and ARIA props in JSX completions.
-
-The extension bundles a TypeScript server plugin. Users install the VS Code extension; the plugin runs inside TypeScript's language server and reorders existing completion entries without replacing TypeScript's completion engine.
+React Props First is a VS Code extension that prioritizes custom React component props before inherited React, DOM, and ARIA props in JSX/TSX completions.
 
 ## How it works
 

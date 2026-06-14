@@ -1,6 +1,6 @@
 {
   "name": "react-props-first",
-  "displayName": "React Props First: IntelliSense",
+  "displayName": "React Props First",
   "description": "Prioritize custom React props in IntelliSense autocomplete for JSX and TSX before DOM and ARIA attributes.",
   "version": "0.0.3",
   "publisher": "yurii",

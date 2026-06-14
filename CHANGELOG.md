@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.3
+
+- Improves Marketplace metadata and README presentation.
+- Adds a before/after IntelliSense ordering image.
+
 ## 0.0.2
 
 - Adds the React Props First extension icon.

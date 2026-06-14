@@ -1,6 +1,6 @@
 {
   "name": "react-props-first-ts-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "TypeScript server plugin for React Props First.",
   "license": "MIT",
   "main": "dist/index.js",

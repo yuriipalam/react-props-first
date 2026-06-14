@@ -1,8 +1,8 @@
 {
   "name": "react-props-first",
-  "displayName": "React Props First",
-  "description": "Prioritize custom React component props before inherited DOM, and ARIA props in JSX completions.",
-  "version": "0.0.2",
+  "displayName": "React Props First: IntelliSense",
+  "description": "Prioritize custom React props in IntelliSense autocomplete for JSX and TSX before DOM and ARIA attributes.",
+  "version": "0.0.3",
   "publisher": "yurii",
   "license": "MIT",
   "repository": {
@@ -19,6 +19,15 @@
   "categories": [
     "Programming Languages",
     "Other"
+  ],
+  "keywords": [
+    "react",
+    "props",
+    "intellisense",
+    "autocomplete",
+    "jsx",
+    "tsx",
+    "typescript"
   ],
   "icon": "images/icon.png",
   "activationEvents": [

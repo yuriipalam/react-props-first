@@ -28,7 +28,6 @@ const extensionPackageJson = {
 
 await rm(staging, { force: true, recursive: true });
 await mkdir(join(staging, "dist"), { recursive: true });
-await mkdir(join(staging, "images"), { recursive: true });
 await mkdir(join(staging, "node_modules", "react-props-first-ts-plugin"), { recursive: true });
 
 await writeFile(
@@ -40,7 +39,7 @@ await cp(join(root, "README.md"), join(staging, "README.md"));
 await cp(join(root, "CHANGELOG.md"), join(staging, "CHANGELOG.md"));
 await cp(join(root, "LICENSE"), join(staging, "LICENSE"));
 await cp(join(root, "dist", "extension.js"), join(staging, "dist", "extension.js"));
-await cp(join(root, "images", "icon.png"), join(staging, "images", "icon.png"));
+await cp(join(root, "images"), join(staging, "images"), { recursive: true });
 await cp(
   join(root, "packages", "react-props-first-ts-plugin", "package.json"),
   join(staging, "node_modules", "react-props-first-ts-plugin", "package.json")

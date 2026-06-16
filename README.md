@@ -2,6 +2,8 @@
 
 React Props First is a VS Code extension for React IntelliSense that prioritizes custom JSX and TSX props before inherited DOM and ARIA attributes in autocomplete.
 
+![React Props First VS Code autocomplete demo](images/react-props-first-vscode-demo.gif)
+
 ![Before and after JSX prop autocomplete ordering](images/completion-order-example.png)
 
 Use it when component-specific props like `variant`, `size`, or `loading` are buried below inherited attributes such as `disabled`, `onClick`, and `aria-label`.
@@ -79,6 +81,20 @@ The extension does not change completions outside JSX attribute-name positions, 
 ```sh
 npm install
 npm test
+```
+
+## Marketplace
+
+Check the published extension metadata and download count:
+
+```sh
+npx vsce show yurii.react-props-first
+```
+
+Publisher dashboard:
+
+```text
+https://marketplace.visualstudio.com/manage/publishers/yurii
 ```
 
 ## Contributing

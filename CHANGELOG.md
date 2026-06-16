@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.4
+
+- Prepare for v1.
+- Create demo gif.
+- Add compatibility matrices
+
 ## 0.0.3
 
 - Improves Marketplace metadata and README presentation.

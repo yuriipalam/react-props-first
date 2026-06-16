@@ -6,6 +6,14 @@ React Props First is a VS Code extension for React IntelliSense that prioritizes
 
 Use it when component-specific props like `variant`, `size`, or `loading` are buried below inherited attributes such as `disabled`, `onClick`, and `aria-label`.
 
+## Install
+
+Install React Props First from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=yurii.react-props-first), or run:
+
+```sh
+code --install-extension yurii.react-props-first
+```
+
 ## How it works
 
 React Props First hooks into TypeScript's completion pipeline through a TypeScript server plugin. TypeScript still produces the normal IntelliSense completion list; the plugin only changes each completion item's `sortText`.

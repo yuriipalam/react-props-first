@@ -2,7 +2,7 @@
   "name": "react-props-first",
   "displayName": "React Props First",
   "description": "Prioritize custom React props in IntelliSense autocomplete for JSX and TSX before DOM and ARIA attributes.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "yurii",
   "license": "MIT",
   "repository": {

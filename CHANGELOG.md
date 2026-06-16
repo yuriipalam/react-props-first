@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.5
+
+- Add "Install" section in README.
+
 ## 0.0.4
 
 - Prepare for v1.

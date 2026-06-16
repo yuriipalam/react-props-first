@@ -1,3 +1,4 @@
+images/*.mp4
 node_modules
 .vscode-test
 .vsce-build

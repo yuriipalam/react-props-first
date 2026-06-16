@@ -1,6 +1,7 @@
 node_modules/
 .vscode-test/
 .vsce-build/
+.tmp/
 dist/
 packages/*/dist/
 *.vsix

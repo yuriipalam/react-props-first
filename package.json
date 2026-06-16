@@ -45,6 +45,9 @@
     "package:vsix": "npm run compile && node scripts/vsce-package.mjs package",
     "publish:marketplace": "npm run compile && node scripts/vsce-package.mjs publish",
     "test": "npm run compile && node --test tests/*.test.js",
+    "test:compat": "npm run test:typescript-matrix && npm run test:react-types-matrix",
+    "test:react-types-matrix": "npm run compile && node scripts/test-react-types-matrix.mjs",
+    "test:typescript-matrix": "npm run compile && node scripts/test-typescript-matrix.mjs",
     "test:vscode": "npm run compile && node ./dist/test/runTest.js"
   },
   "contributes": {
